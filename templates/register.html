@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Register | Project Manager</title>
+</head>
+
+<body class="body">
+    {% include "header.html" %}
+
+    <div class="form">
+        <form method="post">
+            {% csrf_token %}
+            <h1>Register</h1>
+            <div class="content">
+                <div class="input-field">
+                    <input type="text" placeholder="Username" autocomplete="nope" name="username" required>
+                </div>
+                <div class="input-field">
+                    <input type="password" placeholder="Password" autocomplete="new-password" name="password" required>
+                </div>
+                <div class="input-field">
+                    <input type="email" placeholder="Email" autocomplete="nope" name="email">
+                </div>
+                <div class="input-field">
+                    <input type="number" placeholder="Phone" autocomplete="nope" name="phone">
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Company" autocomplete="nope" name="company">
+                </div>
+                <div class="input-field">
+                    <select name="is_admin">
+                        <option selected disabled>Admin</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="action">
+                <button class="btn-active" type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+{% include "footer.html" %}
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My Projects | Project Manager</title>
+</head>
+
+<body>
+    {% include "header.html" %}
+
+    <div class="pbody">
+        <h2 style="text-align: center;">
+            My Projects
+        </h2>
+
+        {% for project in projects %}
+        <div class="courses-container">
+            <div class="course">
+                <div class="course-preview">
+                    <h6>{{ project.accessed }}</h6>
+                    <h2>{{ project.created_by.username }}</h2>
+                </div>
+                <div class="course-info">
+                    <h6>Service Type: {{ project.service_type }}</h6>
+                    <h2>{{ project.pname }}</h2>
+                    <button class="btn">
+                        <a href="/project{{ project.id }}" target="_blank">Continue</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+{% include "footer.html" %}
+
+</html>

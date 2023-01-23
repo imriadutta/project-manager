@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+
+* {
+    font-family: 'Mukta', sans-serif;
+}
+
+.row {
+    display: flex;
+}
+
+.col {
+    flex: 50%;
+    text-align: center;
+}
+
+.nav {
+    background-color: #465c50;
+    color: white;
+}
+
+.logo h1 {
+    margin-top: 5%;
+}
+
+.logo h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo h1 a:hover {
+    color: #bd8c23;
+}
+
+.greet {
+    display: inline-block;
+    padding-top: 5px;
+}
+
+.username {
+    color: #bd8c23;
+}
+
+.signup ul {
+    list-style: none;
+}
+
+.signup ul li {
+    display: inline;
+    padding: 20px;
+}
+
+.button {
+    text-decoration: none;
+    display: inline-block;
+    width: 115px;
+    height: 45px;
+    background: #bd8c23;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    line-height: 25px;
+}
+
+.button:focus,
+.button:hover {
+    color: #465c50;
+    background-color: #feca53;
+}
+
+/* alert message */
+
+.alert {
+    padding: 20px;
+    background-color: #bd8c23;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+/* index page */
+
+.main-h1 {
+    padding: 5% 20% 2% 20%;
+    text-align: center;
+}
+
+.cover-img {
+    margin-top: 10px;
+}
+
+/* projects page */
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.pbody {
+    background-image: linear-gradient(45deg, #feca53, #567062);
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.course {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    max-width: 100%;
+    margin: 20px;
+    overflow: hidden;
+    width: 700px;
+}
+
+.course h6 {
+    opacity: 0.6;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.course h2 {
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+
+.course-preview {
+    background-color: #465c50;
+    color: #fff;
+    padding: 30px;
+    max-width: 250px;
+}
+
+.course-preview a {
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    opacity: 0.6;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+.course-info {
+    padding: 30px;
+    position: relative;
+    width: 100%;
+}
+
+.btn {
+    background-color: #465c50;
+    border: 0;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 25px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    letter-spacing: 1px;
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #567062;
+}
+
+/* login and register page */
+
+.body {
+    background: #feca53;
+}
+
+.form {
+    background: #fff;
+    width: 500px;
+    margin: 65px auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    border-radius: 4px;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+}
+
+.form h1 {
+    padding: 35px 35px 0 35px;
+    font-weight: 300;
+}
+
+.form .content {
+    padding: 35px;
+    text-align: center;
+}
+
+.form .content p {
+    color: #747474;
+}
+
+.form .input-field {
+    padding: 12px 5px;
+}
+
+.form .input-field input {
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    padding: 10px 1px;
+    border: 0;
+    border-bottom: 1px solid #747474;
+    outline: none;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.form .input-field input::-webkit-input-placeholder {
+    text-transform: uppercase;
+}
+
+.form .input-field input::-moz-placeholder {
+    text-transform: uppercase;
+}
+
+.form .input-field input:-ms-input-placeholder {
+    text-transform: uppercase;
+}
+
+.form .input-field input::-ms-input-placeholder {
+    text-transform: uppercase;
+}
+
+.form .input-field input::placeholder {
+    text-transform: uppercase;
+}
+
+.form .input-field input:focus {
+    border-color: #222;
+}
+
+/* .form .input-field option {
+    color: #747474;
+} */
+
+.form a.link {
+    text-decoration: none;
+    color: #747474;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.form .action {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+}
+
+.form .action button {
+    width: 100%;
+    border: none;
+    padding: 18px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: #e8e9ec;
+    color: #777;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 0;
+    letter-spacing: 0.2px;
+    outline: 0;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.form .action button:hover {
+    background: #d8d8d8;
+}
+
+.form .action .btn-active {
+    background: #465c50;
+    color: #fff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 4px;
+}
+
+.form .action .btn-active:hover {
+    background: #567062;
+}
+
+#otp,
+#new-pass {
+    display: none;
+}

@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="static/css/style.css">
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<header>
+    <div class="row">
+        <div class="col nav logo">
+            <h1>
+                <a href="/home">
+                    Project Manager
+                </a>
+            </h1>
+        </div>
+        <div class="col nav greet">
+            <h2>
+                Welcome
+                <span class="username">
+                    {% if request.session.username %}
+                    {{ request.session.username }}
+                    {% else %}
+                    user
+                    {% endif %}
+                </span>
+            </h2>
+            <div class="signup">
+                <ul>
+                    {% if request.session.isadmin == 1 %}
+                    <li>
+                        <a href="/register" class="button">
+                            Register
+                        </a>
+                    </li>
+                    {% endif %}
+                    <li>
+                        <a href="/allprojects" class="button">
+                            All Projects
+                        </a>
+                    </li>
+                    {% if request.session.username %}
+                    <li>
+                        <a href="/createproject" class="button">
+                            Create Project
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/myprojects" class="button">
+                            My Projects
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/logout" class="button" id="logout">
+                            Logout
+                        </a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="/login" class="button">
+                            Login
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% if msg %}
+<div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    {{ msg }}
+</div>
+{% endif %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Create Project | Project Manager</title>
+</head>
+
+<body>
+    {% include "header.html" %}
+
+    <div class="form">
+        <form method="post">
+            {% csrf_token %}
+            <h1>Create Project</h1>
+            <div class="content">
+                <div class="input-field">
+                    <input type="text" placeholder="Project name" autocomplete="nope" name="pname" required>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Project Description" autocomplete="nope" name="description"
+                        required>
+                </div>
+                <div class="input-field">
+                    <select name="stype">
+                        <option selected disabled>Service Type</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <select name="accessed">
+                        <option selected disabled>Access</option>
+                        <option value="public">Public</option>
+                        <option value="private">Private</option>
+                    </select>
+                </div>
+            </div>
+            <div class="action">
+                <button class="btn-active" type="submit">Create Project</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+{% include "footer.html" %}
+
+</html>

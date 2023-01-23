@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login | Project Manager</title>
+</head>
+
+<body class="body">
+    {% include "header.html" %}
+
+    <div class="form">
+        <form method="post">
+            {% csrf_token %}
+            <h1>Login</h1>
+            <div class="content">
+                <div class="input-field">
+                    <input type="text" placeholder="Username" name="username" required>
+                </div>
+                <div class="input-field">
+                    <input type="password" placeholder="Password" name="password" required>
+                </div>
+                <a id="fp" class="link" href="/forgotpassword">
+                    <u>Forgot Your Password?</u>
+                </a>
+            </div>
+            <div class="action">
+                <button type="submit" class="btn-active">Login</button>
+            </div>
+        </form>
+    </div>
+
+    {% include "footer.html" %}
+
+</body>
+
+</html>

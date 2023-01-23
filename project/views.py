@@ -118,8 +118,6 @@ def confirmOTP(request):
 def passwordChanged(request):
     username = request.POST.get('un')
     newpass = request.POST.get('newpass')
-    print(username)
-    print(newpass)
     user = User.objects.get(username=username)
     user.password = newpass
     user.save()
